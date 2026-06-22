@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glow & Vogue | Beauty & Fashion Blog</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#faf8f7;
+    color:#333;
+    line-height:1.6;
+}
+
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#fff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,0.05);
+}
+
+.logo{
+    font-size:1.8rem;
+    font-weight:700;
+    color:#d16d8c;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#444;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#d16d8c;
+}
+
+/* Hero */
+.hero{
+    min-height:85vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px;
+    background:
+    linear-gradient(rgba(255,255,255,.7),
+    rgba(255,255,255,.7)),
+    url("https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:4rem;
+    color:#222;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.1rem;
+    color:#555;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 34px;
+    background:#d16d8c;
+    color:#fff;
+    text-decoration:none;
+    border-radius:40px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#ba5878;
+}
+
+/* Section */
+.section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+    color:#222;
+}
+
+/* Blog Grid */
+.blog-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+}
+
+.category{
+    color:#d16d8c;
+    font-size:.85rem;
+    font-weight:600;
+    text-transform:uppercase;
+}
+
+.card h3{
+    margin:12px 0;
+}
+
+.card p{
+    color:#666;
+}
+
+/* Newsletter */
+.newsletter{
+    background:#fff;
+    text-align:center;
+    border-radius:25px;
+    padding:60px 30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.newsletter h2{
+    margin-bottom:15px;
+}
+
+.newsletter p{
+    margin-bottom:25px;
+    color:#666;
+}
+
+.newsletter form{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.newsletter input{
+    padding:14px 18px;
+    width:320px;
+    border:1px solid #ddd;
+    border-radius:50px;
+    outline:none;
+}
+
+.newsletter button{
+    border:none;
+    padding:14px 30px;
+    border-radius:50px;
+    background:#d16d8c;
+    color:white;
+    cursor:pointer;
+}
+
+/* Footer */
+footer{
+    background:#111;
+    color:#ccc;
+    text-align:center;
+    padding:30px;
+    margin-top:80px;
+}
+
+footer h3{
+    color:#fff;
+    margin-bottom:10px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.8rem;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="logo">Glow & Vogue</div>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Beauty</a></li>
+        <li><a href="#">Fashion</a></li>
+        <li><a href="#">Lifestyle</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Beauty Meets Style</h1>
+        <p>
+            Discover the latest beauty trends, skincare secrets,
+            fashion inspiration, and style tips curated for modern women.
+        </p>
+        <a href="#" class="btn">Explore Articles</a>
+    </div>
+</section>
+
+<!-- Latest Posts -->
+<section class="section">
+    <h2 class="section-title">Latest Articles</h2>
+
+    <div class="blog-grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80" alt="">
+            <div class="card-content">
+                <span class="category">Beauty</span>
+                <h3>Top 10 Skincare Essentials for Glowing Skin</h3>
+                <p>Build a skincare routine that keeps your skin radiant and healthy every day.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80" alt="">
+            <div class="card-content">
+                <span class="category">Fashion</span>
+                <h3>Must-Have Fashion Trends This Season</h3>
+                <p>Explore the colors, silhouettes and accessories dominating the fashion world.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" alt="">
+            <div class="card-content">
+                <span class="category">Lifestyle</span>
+                <h3>How to Create a Signature Personal Style</h3>
+                <p>Learn simple ways to elevate your wardrobe and express your personality.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Newsletter -->
+<section class="section">
+    <div class="newsletter">
+        <h2>Join Our Beauty Club</h2>
+        <p>Get weekly beauty and fashion inspiration delivered to your inbox.</p>
+
+        <form>
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <h3>Glow & Vogue</h3>
+    <p>Beauty • Fashion • Lifestyle</p>
+    <p style="margin-top:10px;">© 2025 Glow & Vogue. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
